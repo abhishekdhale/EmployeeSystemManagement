@@ -9,7 +9,6 @@ import net.ems.emsbackend.service.EmployeeService;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
 public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeRepository employeeRepository;
