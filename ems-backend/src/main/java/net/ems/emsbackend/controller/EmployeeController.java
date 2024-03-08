@@ -2,7 +2,7 @@ package net.ems.emsbackend.controller;
 
 import lombok.AllArgsConstructor;
 import net.ems.emsbackend.dto.EmployeeDto;
-import net.ems.emsbackend.entity.Employee;
+
 import net.ems.emsbackend.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,4 +35,18 @@ public class EmployeeController {
         EmployeeDto employeeDto=employeeService.updateEmployee(employeeId, updatedEmployee);
         return ResponseEntity.ok(employeeDto);
     }
+
+    //Build Delete Employee Rest API
+
+//    private final EmployeeService empService;
+//
+//    public EmployeeController(EmployeeService employeeService) {
+//        this.empService = employeeService;
+//    }
+    @DeleteMapping("{id}")
+    public ResponseEntity<EmployeeDto> deleteEmployee(@PathVariable("id") Long employeeId){
+        employeeService.deleteEmployee(employeeId);
+        return ResponseEntity.ok().build();
+    }
+
 }

@@ -7,4 +7,6 @@ public interface EmployeeService {
 
     EmployeeDto getEmployeeById(long employeeId);
     EmployeeDto updateEmployee(Long employeeId, EmployeeDto updatedEmployee);
+
+    void deleteEmployee(Long empployeeId);
 }
