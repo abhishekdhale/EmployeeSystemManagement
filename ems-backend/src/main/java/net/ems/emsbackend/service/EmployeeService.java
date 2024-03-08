@@ -4,4 +4,7 @@ import net.ems.emsbackend.dto.EmployeeDto;
 
 public interface EmployeeService {
     EmployeeDto createEmployee(EmployeeDto employeeDto);
+
+    EmployeeDto getEmployeeById(long employeeId);
+    
 }
